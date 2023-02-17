@@ -1,0 +1,61 @@
+.compraContainer{
+    margin: 50px auto;
+    
+    padding: 40px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "img precio"
+    "img botones"
+    "descripcion descripcion";
+    
+    .cardImg{
+        grid-area: img;
+        border: 2px solid rgb(94, 94, 94);
+        margin: 30px;
+        border-radius:15px ;
+        img{
+            padding: 30px;
+            &:hover{
+                transform: scale(1.1);
+                transition: 1s;
+            }
+        }
+    }
+
+    .compraTitle{
+    grid-area: precio;
+    margin-top: 80px;
+        span{
+            font-size: 25px;
+        }
+    }
+
+    .compraBotones{
+    grid-area: botones;
+    padding: 40px;
+    p {
+        @extend .botonesCompra;
+        margin-top: 15px;
+        width: 100%;
+            a{
+            color: white;
+            }
+    
+    &:hover{
+        background-color:rgb(255, 105, 130);
+            }
+        
+        }
+    }
+
+    .descripcion{
+        grid-area: descripcion;
+        padding: 50px;
+        p{
+            font-size: 20px;
+        }
+    }
+
+}

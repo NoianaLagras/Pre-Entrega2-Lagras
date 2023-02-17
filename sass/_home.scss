@@ -1,0 +1,25 @@
+.todosLosProductos {
+
+    color: whitesmoke;
+    text-align: center;
+    margin: 100px;
+    border-radius: 3px;
+    animation: mi-efecto2;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+
+@keyframes mi-efecto2{
+0% {
+    background-color: #c9437d;
+}
+38% {
+    background-color: #41a53f;
+}
+66%{
+    background-color:rgb(40, 155, 155) ;
+}
+100% {
+    background-color:rgb(153, 0, 255) ;
+}
+}
+}

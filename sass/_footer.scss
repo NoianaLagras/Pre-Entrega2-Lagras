@@ -1,0 +1,23 @@
+
+footer{
+    background-color: #1d1b1c;
+    color: aliceblue;
+    width: 100%;
+    padding: 15px; 
+    font-size: medium;
+    .boxFooter{
+        display: flex;
+        justify-content: space-between;
+        div{
+            margin:20px;
+            i{
+                margin: 5px;
+            }
+            p{
+                font-weight: 500;
+                font-size: large;
+            }
+        }        
+    }
+}
+    

@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width:100%;
+}
+
+
+.fondoP{
+    background-image:url("../img/sobre2.webp");
+    background-size: cover;
+    margin: 50px auto;
+    padding: 70px 0px;
+}
+
+/* Cards */
+
+.container {
+
+    width: 90%;
+    @include grillas;
+    grid-template-rows: auto;
+
+    .item {
+        background-color: $bgPages2;
+        color: white;
+        margin: 30px 20px;
+        border-radius: 3px;
+        text-align: center;
+
+        &:hover{
+            transform: scale(1.2);
+            transition: 0.8s;
+            }
+        
+        a{   
+            @extend .botones;
+            background-color: #314742;
+            color:rgb(255, 255, 255);
+            border: #4bcf49;
+            margin: 10px;
+            &:hover{
+                @include txtTransform;
+                background-color: white;
+            }
+            }
+        
+            img{
+                padding: 10px;
+            }
+        }
+    }
+
+.verMas{
+    color: #B30024;
+    width: 100%;
+    @extend .botones;
+}
+
+/* titulos para cada pagina de joyeria */
+.joy{
+    background-color: $bgPages2;
+    color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-family: monospace;
+    text-align: center;
+}
+.letras{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.89);
+}
+        /* menu check */
+        .icon{
+            color: white;
+            position: fixed;
+            right: 0;
+            top: 35px;
+            font-size: 35px;
+            height: 100%;
+            display: none;
+            opacity: 0;
+            }
+        #check{
+            display: none;
+            }

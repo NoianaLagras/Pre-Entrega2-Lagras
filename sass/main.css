@@ -1,0 +1,684 @@
+/* mixin */
+/* maps */
+.icon__fb {
+  color: rgb(71, 71, 187);
+}
+
+.icon__wpp {
+  color: rgb(88, 216, 88);
+}
+
+.icon__insta {
+  color: rgb(187, 83, 187);
+}
+
+/* Extends */
+.botones, .preguntas .irA, .verMas, .container .item a {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.botonesCompra, .compraContainer .compraBotones p {
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: rgb(162, 42, 61);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.fondoP {
+  background-image: url("../img/sobre2.webp");
+  background-size: cover;
+  margin: 50px auto;
+  padding: 70px 0px;
+}
+
+/* Cards */
+.container {
+  width: 90%;
+  margin: 60px auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+.container .item {
+  background-color: #3a665a;
+  color: white;
+  margin: 30px 20px;
+  border-radius: 3px;
+  text-align: center;
+}
+.container .item:hover {
+  transform: scale(1.2);
+  transition: 0.8s;
+}
+.container .item a {
+  background-color: #314742;
+  color: rgb(255, 255, 255);
+  border: #4bcf49;
+  margin: 10px;
+}
+.container .item a:hover {
+  transition: 0.5s;
+  color: black;
+  -webkit-text-decoration: underline crimson 3px;
+          text-decoration: underline crimson 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: white;
+}
+.container .item img {
+  padding: 10px;
+}
+
+.verMas {
+  color: #B30024;
+  width: 100%;
+}
+
+/* titulos para cada pagina de joyeria */
+.joy {
+  background-color: #3a665a;
+  color: white;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-family: monospace;
+  text-align: center;
+}
+
+.letras {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.89);
+}
+
+/* menu check */
+.icon {
+  color: white;
+  position: fixed;
+  right: 0;
+  top: 35px;
+  font-size: 35px;
+  height: 100%;
+  display: none;
+  opacity: 0;
+}
+
+#check {
+  display: none;
+}
+
+header {
+  width: 100%;
+  padding: 7px;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background-color: #b8dac2;
+  z-index: 999;
+}
+header .logo {
+  width: 100px;
+  height: auto;
+}
+header h1 {
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  font-family: monospace;
+  font-size: 18px;
+  width: 15ch;
+  font-weight: 500;
+  -webkit-animation: typing 1s steps(15), blink 0.5s infinite step-end alternate;
+          animation: typing 1s steps(15), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+header nav {
+  width: 550px;
+}
+
+/* NavBars */
+.menu {
+  background-color: white;
+  justify-items: center;
+  border-radius: 3px;
+}
+.menu li {
+  position: relative;
+  display: inline-block;
+}
+.menu li a {
+  display: block;
+  padding: 20px;
+  color: black;
+}
+.menu li a:hover {
+  transition: 0.5s;
+  color: black;
+  -webkit-text-decoration: underline crimson 3px;
+          text-decoration: underline crimson 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.menu li .submenu {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  padding: 0px;
+  border-radius: 3px;
+}
+.menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+footer {
+  background-color: #1d1b1c;
+  color: aliceblue;
+  width: 100%;
+  padding: 15px;
+  font-size: medium;
+}
+footer .boxFooter {
+  display: flex;
+  justify-content: space-between;
+}
+footer .boxFooter div {
+  margin: 20px;
+}
+footer .boxFooter div i {
+  margin: 5px;
+}
+footer .boxFooter div p {
+  font-weight: 500;
+  font-size: large;
+}
+
+.todosLosProductos {
+  color: whitesmoke;
+  text-align: center;
+  margin: 100px;
+  border-radius: 3px;
+  -webkit-animation: mi-efecto2;
+          animation: mi-efecto2;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes mi-efecto2 {
+  0% {
+    background-color: #c9437d;
+  }
+  38% {
+    background-color: #41a53f;
+  }
+  66% {
+    background-color: rgb(40, 155, 155);
+  }
+  100% {
+    background-color: rgb(153, 0, 255);
+  }
+}
+@keyframes mi-efecto2 {
+  0% {
+    background-color: #c9437d;
+  }
+  38% {
+    background-color: #41a53f;
+  }
+  66% {
+    background-color: rgb(40, 155, 155);
+  }
+  100% {
+    background-color: rgb(153, 0, 255);
+  }
+}
+
+.compraContainer {
+  margin: 50px auto;
+  padding: 40px;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "img precio" "img botones" "descripcion descripcion";
+}
+.compraContainer .cardImg {
+  grid-area: img;
+  border: 2px solid rgb(94, 94, 94);
+  margin: 30px;
+  border-radius: 15px;
+}
+.compraContainer .cardImg img {
+  padding: 30px;
+}
+.compraContainer .cardImg img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.compraContainer .compraTitle {
+  grid-area: precio;
+  margin-top: 80px;
+}
+.compraContainer .compraTitle span {
+  font-size: 25px;
+}
+.compraContainer .compraBotones {
+  grid-area: botones;
+  padding: 40px;
+}
+.compraContainer .compraBotones p {
+  margin-top: 15px;
+  width: 100%;
+}
+.compraContainer .compraBotones p a {
+  color: white;
+}
+.compraContainer .compraBotones p:hover {
+  background-color: rgb(255, 105, 130);
+}
+.compraContainer .descripcion {
+  grid-area: descripcion;
+  padding: 50px;
+}
+.compraContainer .descripcion p {
+  font-size: 20px;
+}
+
+.fondoProductos {
+  margin: 50px auto;
+  background-color: #b8dac2;
+  padding: 10px;
+}
+
+.containerProductos {
+  margin: 60px auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "Anillos Pulseras Collares" "Todos Todos Todos";
+}
+.containerProductos p {
+  color: black;
+  font-size: larger;
+  text-align: center;
+}
+.containerProductos p:hover {
+  transition: 0.5s;
+  color: black;
+  -webkit-text-decoration: underline crimson 3px;
+          text-decoration: underline crimson 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.containerProductos .itemTodos, .containerProductos .itemAnillos, .containerProductos .itemCollares, .containerProductos .itemPulseras {
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+  margin: 15px 0;
+  border-style: outset;
+}
+.containerProductos .itemTodos {
+  grid-area: Todos;
+}
+.containerProductos .itemAnillos {
+  grid-area: Anillos;
+}
+.containerProductos .itemCollares {
+  grid-area: Collares;
+}
+.containerProductos .itemPulseras {
+  grid-area: Pulseras;
+}
+
+.info {
+  margin: 60px auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30% 30% auto;
+  grid-template-areas: "sobre sobre redes" "preg preg redes" "medida medida medida";
+}
+.info .infoSN, .info .infoMA, .info .infoPF, .info .infoRS {
+  font-size: large;
+  background-color: rgba(255, 255, 255, 0.63);
+  text-align: center;
+  border-radius: 5px;
+}
+.info .infoSN {
+  grid-area: sobre;
+}
+.info .infoPF {
+  grid-area: preg;
+}
+.info .infoRS {
+  grid-area: redes;
+}
+.info .infoMA {
+  grid-area: medida;
+}
+
+.preguntas {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.63);
+  padding: 5px;
+}
+.preguntas h2 {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.932);
+  text-decoration: underline;
+}
+.preguntas i {
+  margin-bottom: 50px;
+}
+.preguntas .irA {
+  background-color: #3a665a;
+  color: white;
+}
+.preguntas .irA:hover {
+  color: rgb(248, 73, 108);
+  background-color: white;
+}
+
+.medidas {
+  font-size: larger;
+  width: 100%;
+  text-align: center;
+  padding: 70px 0px;
+  background-image: url("../img/fondoM.webp");
+  font-weight: 500;
+}
+.medidas p {
+  margin: 30px auto;
+}
+.medidas .tablas {
+  background-color: rgba(255, 255, 255, 0.63);
+  padding: 50px;
+}
+.medidas .tablas td {
+  padding: 20px;
+}
+.medidas .tablas h2 {
+  font-weight: 700;
+}
+
+.about {
+  margin: 50px auto;
+  background-image: url("../img/sobre1.webp");
+  background-size: cover;
+  padding: 50px;
+}
+.about .aboutUs {
+  text-align: center;
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.699);
+  color: white;
+  padding: 40px;
+}
+
+.paginaDeContacto {
+  background-image: url("../img/contacto.webp");
+  margin: 50px auto;
+  padding: 50px;
+}
+
+.contacto {
+  margin: 80px auto;
+  padding: 10px 50px;
+  color: white;
+  width: 65%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.185);
+  border: 4px solid white;
+  font-size: larger;
+  font-family: monospace;
+  border-radius: 5px;
+  text-align: center;
+}
+.contacto h2 {
+  font-weight: 600;
+}
+.contacto label {
+  display: block;
+}
+.contacto input {
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+.contacto input:focus {
+  background-color: #b8dac2;
+}
+.contacto textarea {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.contacto textarea:focus {
+  background-color: #b8dac2;
+}
+
+@media (max-width: 1024px) {
+  header {
+    justify-content: center;
+  }
+  header .buscador {
+    display: none;
+  }
+  header nav {
+    margin-left: 20px;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+  .container .item {
+    margin: 30px 15px;
+  }
+  .medidas {
+    padding: 30px 0px;
+  }
+  .medidas .tablas tr {
+    display: inline-block;
+    padding: 5px;
+  }
+  .medidas .tablas tr td {
+    padding: 10px;
+    display: block;
+  }
+  .paginaDeContacto {
+    padding: 25px 70px;
+  }
+  .paginaDeContacto .contacto {
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+  }
+  .paginaDeContacto .contacto h2 {
+    font-size: 2rem;
+  }
+  .paginaDeContacto .contacto input {
+    width: 40%;
+    margin-bottom: 15px;
+  }
+  .paginaDeContacto .contacto textarea {
+    width: 45%;
+  }
+  .about {
+    padding: 30px 5px;
+  }
+  .about .aboutUs {
+    padding: 20px;
+  }
+  .fondoProductos {
+    padding: 0;
+  }
+  .compraContainer {
+    margin: 50px auto;
+    padding: 10px;
+  }
+  .compraContainer .cardImg {
+    margin: 0px;
+  }
+  .compraContainer .compraTitle {
+    margin-top: 30px;
+  }
+  .compraContainer .compraBotones {
+    padding: 10px 40px;
+  }
+  footer .boxFooter {
+    text-align: center;
+    display: inline-block;
+  }
+  footer .boxFooter div {
+    margin: 25px;
+  }
+  footer .boxFooter div i {
+    font-size: 40px;
+  }
+}
+@media (max-width: 750px) {
+  header {
+    width: 100%;
+    height: 100px;
+  }
+  header .logo {
+    width: 70px;
+    margin-left: 5px;
+  }
+  header .icon {
+    display: flex;
+    opacity: 1;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  header .menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    top: 100px;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.925);
+    transition: all 0.5s;
+  }
+  header .menu li {
+    display: block;
+    line-height: 15px;
+    margin: 10px 0px;
+    transition: all 0.5s;
+  }
+  header .menu .submenu {
+    display: none;
+  }
+  header #check:checked ~ .menu {
+    opacity: 1;
+    height: 100%;
+    visibility: visible;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 30px;
+  }
+  .container .item {
+    margin: 40px auto;
+  }
+  .paginaDeContacto {
+    padding: 20px;
+  }
+  .paginaDeContacto .contacto {
+    padding: 30px 0px;
+  }
+  .paginaDeContacto .contacto h2 {
+    font-size: 35px;
+  }
+  .paginaDeContacto .contacto input {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+  .paginaDeContacto .contacto textarea {
+    width: 75%;
+  }
+  .todosLosProductos {
+    margin: 100px 50px;
+    padding: 10px;
+  }
+  .compraContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .compraContainer .cardImg {
+    margin: 20px;
+  }
+  .info {
+    gap: 10px;
+  }
+  .botones, .container .item a, .verMas, .preguntas .irA {
+    margin-bottom: 30px;
+  }
+  .containerProductos {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  footer {
+    padding: 10px;
+  }
+  footer .boxFooter div {
+    margin: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

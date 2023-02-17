@@ -1,0 +1,49 @@
+$colorPrincipal:#b8dac2;
+$bgPages: rgba(255, 255, 255, 0.63);
+$bgPages2:#3a665a;
+
+/* mixin */
+@mixin txtTransform {
+    transition: 0.5s;
+    color: black;
+    text-decoration: underline crimson 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+@mixin grillas {
+    margin: 60px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* maps */
+$redSocial:(
+    fb: rgb(71, 71, 187),
+    wpp:rgb(88, 216, 88),
+    insta: rgb(187, 83, 187))
+;
+@each $nombre, $valor in $redSocial{
+    .icon__#{$nombre} {
+        color: $valor;
+    }
+}
+
+
+
+/* Extends */
+.botones{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+.botonesCompra{
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color:  rgb(162, 42, 61);
+}

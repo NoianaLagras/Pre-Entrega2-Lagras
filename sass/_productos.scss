@@ -1,0 +1,39 @@
+.fondoProductos{ 
+    margin: 50px auto;
+    background-color: $colorPrincipal;
+    padding: 10px
+}
+
+.containerProductos{
+@include grillas;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "Anillos Pulseras Collares"
+    "Todos Todos Todos";
+    p{
+        color: black;
+        font-size: larger;
+        text-align: center;
+        &:hover{
+            @include txtTransform
+        }
+    }
+    .itemTodos, .itemAnillos, .itemCollares, .itemPulseras{
+        background-color: rgb(255, 255, 255);
+        max-width: 100%;
+        margin: 15px 0;
+        border-style: outset;
+    }
+    .itemTodos{
+        grid-area: Todos;
+    }
+    .itemAnillos{
+        grid-area: Anillos;
+    }
+    .itemCollares{
+        grid-area: Collares;
+    }
+    .itemPulseras{
+        grid-area: Pulseras;
+    }
+}

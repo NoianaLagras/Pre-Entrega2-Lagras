@@ -1,0 +1,77 @@
+header{
+    width: 100%;
+    padding: 7px;
+    position:sticky;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    background-color: $colorPrincipal;
+    z-index: 999;
+    
+        .logo{
+            width: 100px;
+            height: auto;
+        }
+    
+        h1{
+            display: block;
+            white-space: nowrap;
+            border-right: 4px solid;
+            font-family: monospace;
+            font-size: 18px;
+            width: 15ch;
+            font-weight: 500;
+            
+            animation: typing 1s steps(15) ,
+            blink 0.5s infinite step-end alternate;
+            overflow: hidden;
+            @keyframes typing {
+                from {
+                width: 0;
+                }
+                }
+            @keyframes blink {
+                50% {border-color: transparent;
+                }
+                } 
+            }
+        nav{
+            width: 550px;
+            }
+    }
+
+/* NavBars */
+.menu{
+            background-color: white;
+            justify-items: center;
+            border-radius: 3px;
+    
+            li{
+                position: relative;
+                display: inline-block;
+                a{
+                    display: block;
+                    padding: 20px;
+                    color:black;
+    
+                    &:hover{
+                    @include txtTransform
+                    }
+    
+                }
+            
+                    .submenu{
+                        position: absolute;
+                        visibility: hidden;
+                        opacity: 0;
+                        background-color: white;
+                        padding: 0px;
+                        border-radius: 3px;
+                    }
+                &:hover .submenu{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+    }
