@@ -73,16 +73,16 @@ carrito.push(producto)
  //confirmar detalles de la compra
 const confirmarCompra = () => {
     const listaProductos= carrito.map (producto=>{
-        return " - " + producto.nombre + " Por la cantidad de : " + producto.cantidad
+        return " - " + producto.nombre + " Por la cantidad de : " + producto.cantidad +" unidades"
     });
     const cantidad = carrito.reduce((acc,elemento) => acc + elemento.cantidad, 0)
     const precioItems = carrito.reduce ((acc, elemento)=> acc + elemento.precio*elemento.cantidad,0)
     alert("Su compra se compone por : "+ "\n"+listaProductos.join("\n\n") +("\n\n")+ " El valor de su compra es $" + precioItems)
     //              Metodo de pago 
     let precioTotal= 0
-    
-        let tipoDePago = prompt("Por favor ingrese su forma de pago \n 1 Para pagar en efectivo(Debito tiene descuento de 10%) \n 2 Para pagar con tarjeta de credito (tiene un recargo del 20%)")
-         do {
+    let tipoDePago = ""
+        do { tipoDePago = prompt("Por favor ingrese su forma de pago \n 1 Para pagar en efectivo(Debito tiene descuento de 10%) \n 2 Para pagar con tarjeta de credito (tiene un recargo del 20%)")
+        
         if(tipoDePago==1){
             alert(("El valor de su compra ahora es de : $")+(precioTotal=precioItems*0.90))
         }else if (tipoDePago==2){
